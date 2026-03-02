@@ -1,0 +1,163 @@
+{
+  "total_questions": 5,
+  "answerable_questions": 3,
+  "refusable_questions": 2,
+  "recall_at_k": 0.667,
+  "precision_at_k": 0.667,
+  "mrr": 0.667,
+  "avg_keyword_coverage": 0.583,
+  "avg_faithfulness": 0.284,
+  "hallucination_rate": 0.8,
+  "refusal_true_pos_rate": 1.0,
+  "refusal_false_pos_rate": 0.333,
+  "refusal_overall_accuracy": 0.8,
+  "recall_scores": [
+    1.0,
+    0.0,
+    1.0
+  ],
+  "precision_scores": [
+    1.0,
+    0.0,
+    1.0
+  ],
+  "rr_scores": [
+    1.0,
+    0.0,
+    1.0
+  ],
+  "faithfulness_scores": [
+    0.679,
+    0.0,
+    0.742,
+    0.0,
+    0.0
+  ],
+  "label": "default",
+  "elapsed_seconds": 0.9,
+  "timestamp": "2026-03-02 07:35:59",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What is penetration testing?",
+      "category": "security",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.615,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 0.75,
+      "faithfulness": 0.679,
+      "faith_method": "heuristic",
+      "faith_detail": "57/84 content words found in context",
+      "sources": [
+        {
+          "file": "Penetration Testing Report.pdf",
+          "page": 1,
+          "relevance": 0.615
+        },
+        {
+          "file": "Penetration Testing Report.pdf",
+          "page": 7,
+          "relevance": 0.329
+        },
+        {
+          "file": "Penetration Testing Report.pdf",
+          "page": 12,
+          "relevance": 0.305
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "What types of AI are discussed?",
+      "category": "ai_concepts",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 0.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/18 content words found in context",
+      "sources": [],
+      "passed": false
+    },
+    {
+      "id": "Q03",
+      "question": "What cars are in the factsheet?",
+      "category": "vehicles",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.535,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.742,
+      "faith_method": "heuristic",
+      "faith_detail": "23/31 content words found in context",
+      "sources": [
+        {
+          "file": "factsheet_cars.pdf",
+          "page": 1,
+          "relevance": 0.535
+        },
+        {
+          "file": "factsheet_cars.pdf",
+          "page": 2,
+          "relevance": 0.367
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "R01",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/18 content words found in context",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last cricket World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/18 content words found in context",
+      "sources": [],
+      "passed": true
+    }
+  ]
+}

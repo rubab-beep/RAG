@@ -1,0 +1,25 @@
+# Enterprise RAG — Python Dependencies
+# Install: pip install -r requirements.txt
+
+# ── Core LLM / RAG Framework ──────────────────────────────────────────────────
+langchain==0.2.16
+langchain-openai==0.1.25
+langchain-community==0.2.16
+
+# ── Vector Database ────────────────────────────────────────────────────────────
+chromadb==0.5.5
+
+# ── Document Loaders ───────────────────────────────────────────────────────────
+pypdf==4.3.1         # PDF extraction (PyMuPDF / fitz)
+python-docx==1.1.2       # DOCX extraction
+
+# ── UI ──────────────────────────────────────────────────────────────────────────
+streamlit==1.37.1
+
+# ── Environment ─────────────────────────────────────────────────────────────────
+python-dotenv==1.0.1
+
+# ── Optional: Local Embeddings (no API key needed) ───────────────────────────
+# Uncomment if you set USE_LOCAL_EMBEDDINGS=True in config.py
+# sentence-transformers==3.0.1
+# torch==2.3.1             # CPU-only: pip install torch --index-url https://download.pytorch.org/whl/cpu
