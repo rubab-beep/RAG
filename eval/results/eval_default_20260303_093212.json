@@ -1,0 +1,430 @@
+{
+  "total_questions": 11,
+  "answerable_questions": 6,
+  "refusable_questions": 5,
+  "recall_at_k": 0.833,
+  "precision_at_k": 0.967,
+  "mrr": 0.75,
+  "avg_keyword_coverage": 1.0,
+  "avg_faithfulness": 0.491,
+  "hallucination_rate": 0.455,
+  "refusal_true_pos_rate": 0.2,
+  "refusal_false_pos_rate": 0.0,
+  "refusal_overall_accuracy": 0.636,
+  "recall_scores": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0
+  ],
+  "precision_scores": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    1.0
+  ],
+  "rr_scores": [
+    1.0,
+    1.0,
+    1.0,
+    0.5,
+    1.0,
+    0.0
+  ],
+  "faithfulness_scores": [
+    0.818,
+    0.791,
+    0.821,
+    0.889,
+    0.889,
+    0.75,
+    0.333,
+    0.0,
+    0.111,
+    0.0,
+    0.0
+  ],
+  "label": "default",
+  "elapsed_seconds": 56.8,
+  "timestamp": "2026-03-03 09:32:12",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What role does La Specialista Maestro play in achieving a perfect balance in coffee?",
+      "category": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_ec9665m_delonghi_handbook",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.764,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.818,
+      "faith_method": "heuristic",
+      "faith_detail": "18/22 content words found in context",
+      "sources": [
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 3,
+          "relevance": 0.764
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 14,
+          "relevance": 0.69
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 25,
+          "relevance": 0.58
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 15,
+          "relevance": 0.573
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "What factors contribute to the ideal temperature to brew coffee?",
+      "category": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_ec9665m_delonghi_handbook",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.721,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.791,
+      "faith_method": "heuristic",
+      "faith_detail": "34/43 content words found in context",
+      "sources": [
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 16,
+          "relevance": 0.721
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 35,
+          "relevance": 0.626
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 37,
+          "relevance": 0.626
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 36,
+          "relevance": 0.626
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q03",
+      "question": "What type of roast pairs well with plant-based drinks made with soy?",
+      "category": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_ec9665m_delonghi_handbook",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.626,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.821,
+      "faith_method": "heuristic",
+      "faith_detail": "23/28 content words found in context",
+      "sources": [
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 27,
+          "relevance": 0.626
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 26,
+          "relevance": 0.598
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 25,
+          "relevance": 0.539
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q04",
+      "question": "What is the main challenge faced by most data scientists in handling unstructured data?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.732,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.5,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.889,
+      "faith_method": "heuristic",
+      "faith_detail": "16/18 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.732
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.701
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q05",
+      "question": "How do software interpret user data collected online?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.565,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 0.8,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.889,
+      "faith_method": "heuristic",
+      "faith_detail": "16/18 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.565
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 3,
+          "relevance": 0.548
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.528
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.499
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.498
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q06",
+      "question": "What type of data is mainly unstructured, according to the text?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.796,
+      "confidence": "HIGH",
+      "recall": 0.0,
+      "precision": 1.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.75,
+      "faith_method": "heuristic",
+      "faith_detail": "15/20 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.796
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.686
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R01",
+      "question": "What is the current stock price of Apple?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.223,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.333,
+      "faith_method": "heuristic",
+      "faith_detail": "3/9 content words found in context",
+      "sources": [
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 32,
+          "relevance": 0.223
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.195
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 8,
+          "relevance": 0.178
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last FIFA World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.174,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/9 content words found in context",
+      "sources": [
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 3,
+          "relevance": 0.174
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 10,
+          "relevance": 0.16
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 28,
+          "relevance": 0.151
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R03",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.209,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.111,
+      "faith_method": "heuristic",
+      "faith_detail": "1/9 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.209
+        },
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 29,
+          "relevance": 0.184
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.182
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 10,
+          "relevance": 0.176
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R04",
+      "question": "What will the weather be like tomorrow?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.204,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/9 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.204
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R05",
+      "question": "Who is the current prime minister of UK?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/24 content words found in context",
+      "sources": [],
+      "passed": true
+    }
+  ]
+}

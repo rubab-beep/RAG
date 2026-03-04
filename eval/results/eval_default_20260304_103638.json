@@ -1,0 +1,278 @@
+{
+  "total_questions": 8,
+  "answerable_questions": 3,
+  "refusable_questions": 5,
+  "recall_at_k": 1.0,
+  "precision_at_k": 0.889,
+  "mrr": 0.5,
+  "avg_keyword_coverage": 0.889,
+  "avg_faithfulness": 0.709,
+  "hallucination_rate": 0.25,
+  "refusal_true_pos_rate": 0.2,
+  "refusal_false_pos_rate": 0.0,
+  "refusal_overall_accuracy": 0.5,
+  "recall_scores": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "precision_scores": [
+    0.667,
+    1.0,
+    1.0
+  ],
+  "rr_scores": [
+    0.5,
+    0.5,
+    0.5
+  ],
+  "faithfulness_scores": [
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    0.67
+  ],
+  "label": "default",
+  "elapsed_seconds": 161.9,
+  "timestamp": "2026-03-04 10:36:38",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What are the columns in the page_titles_all.csv file?",
+      "category": "page_titles_all",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.484,
+      "confidence": "LOW",
+      "recall": 1.0,
+      "precision": 0.667,
+      "rr": 0.5,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 7/7 claims",
+      "sources": [
+        {
+          "file": "page_titles_all.csv",
+          "page": 2,
+          "relevance": 0.484
+        },
+        {
+          "file": "page_titles_all.csv",
+          "page": 1,
+          "relevance": 0.476
+        },
+        {
+          "file": "project_tracking.xlsx",
+          "page": 1,
+          "relevance": 0.227
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "What is the pixel width of the title 'Storm Damage Roof Repair Services'?",
+      "category": "page_titles_all",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.485,
+      "confidence": "LOW",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.5,
+      "keyword_coverage": 0.667,
+      "faithfulness": 0.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 0/1 claims",
+      "sources": [
+        {
+          "file": "page_titles_all.csv",
+          "page": 2,
+          "relevance": 0.485
+        },
+        {
+          "file": "page_titles_all.csv",
+          "page": 1,
+          "relevance": 0.414
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "Q03",
+      "question": "What is the indexability status of the page at https://roofersandcontractors.com/blog/3/?",
+      "category": "page_titles_all",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.614,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.5,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/1 claims",
+      "sources": [
+        {
+          "file": "page_titles_all.csv",
+          "page": 1,
+          "relevance": 0.614
+        },
+        {
+          "file": "page_titles_all.csv",
+          "page": 2,
+          "relevance": 0.586
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "R01",
+      "question": "What is the current stock price of Apple?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.138,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 0/1 claims",
+      "sources": [
+        {
+          "file": "page_titles_all.csv",
+          "page": 1,
+          "relevance": 0.138
+        },
+        {
+          "file": "page_titles_all.csv",
+          "page": 2,
+          "relevance": 0.137
+        },
+        {
+          "file": "project_tracking.xlsx",
+          "page": 1,
+          "relevance": 0.1
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last FIFA World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.18,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/1 claims",
+      "sources": [
+        {
+          "file": "project_tracking.xlsx",
+          "page": 1,
+          "relevance": 0.18
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R03",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.134,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/1 claims",
+      "sources": [
+        {
+          "file": "page_titles_all.csv",
+          "page": 1,
+          "relevance": 0.134
+        },
+        {
+          "file": "project_tracking.xlsx",
+          "page": 1,
+          "relevance": 0.129
+        },
+        {
+          "file": "page_titles_all.csv",
+          "page": 2,
+          "relevance": 0.127
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R04",
+      "question": "What will the weather be like tomorrow?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.151,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/1 claims",
+      "sources": [
+        {
+          "file": "page_titles_all.csv",
+          "page": 2,
+          "relevance": 0.151
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R05",
+      "question": "Who is the current prime minister of UK?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.67,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 2/3 claims",
+      "sources": [],
+      "passed": true
+    }
+  ]
+}

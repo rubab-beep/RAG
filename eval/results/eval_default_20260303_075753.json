@@ -1,0 +1,501 @@
+{
+  "total_questions": 14,
+  "answerable_questions": 9,
+  "refusable_questions": 5,
+  "recall_at_k": 0.889,
+  "precision_at_k": 0.978,
+  "mrr": 0.704,
+  "avg_keyword_coverage": 0.889,
+  "avg_faithfulness": 0.652,
+  "hallucination_rate": 0.429,
+  "refusal_true_pos_rate": 0.4,
+  "refusal_false_pos_rate": 0.0,
+  "refusal_overall_accuracy": 0.786,
+  "recall_scores": [
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "precision_scores": [
+    1.0,
+    0.8,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "rr_scores": [
+    0.5,
+    1.0,
+    0.0,
+    1.0,
+    0.333,
+    0.5,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "faithfulness_scores": [
+    1.0,
+    0.733,
+    1.0,
+    1.0,
+    1.0,
+    0.4,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    0.5,
+    0.0,
+    0.0,
+    0.5
+  ],
+  "label": "default",
+  "elapsed_seconds": 172.7,
+  "timestamp": "2026-03-03 07:57:53",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What is the main challenge faced by most data scientists in handling unstructured data?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.732,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.5,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/1 claims",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.732
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.701
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "How do software interpret user data collected online?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.565,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 0.8,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.733,
+      "faith_method": "heuristic",
+      "faith_detail": "22/30 content words found in context (LLM judge failed: Extra data: line 11 column 1 (char 263))",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.565
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 3,
+          "relevance": 0.548
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.528
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.499
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.498
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q03",
+      "question": "What type of data is mainly unstructured, according to the text?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.796,
+      "confidence": "HIGH",
+      "recall": 0.0,
+      "precision": 1.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/1 claims",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.796
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.686
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "Q04",
+      "question": "Who are the authors of the case study 'Software Engineering for Machine Learning'?",
+      "category": "sample-unstructured-paper",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.723,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 9/9 claims",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 1,
+          "relevance": 0.723
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 3,
+          "relevance": 0.654
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 2,
+          "relevance": 0.627
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 10,
+          "relevance": 0.627
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q05",
+      "question": "What is one of the uses of machine learning in infrastructure projects?",
+      "category": "sample-unstructured-paper",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.66,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.333,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 4/4 claims",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 2,
+          "relevance": 0.66
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 1,
+          "relevance": 0.657
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.604
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.601
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q06",
+      "question": "What models are the AI team's experience based on?",
+      "category": "sample-unstructured-paper",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.587,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.5,
+      "keyword_coverage": 0.0,
+      "faithfulness": 0.4,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 2/5 claims",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 6,
+          "relevance": 0.587
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 7,
+          "relevance": 0.574
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.541
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "Q07",
+      "question": "What type of data can be stored in Azure Blob Storage?",
+      "category": "semi-structured",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.793,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 2/2 claims",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.793
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q08",
+      "question": "How do you copy a blob container in Storage Explorer?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.809,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 5/5 claims",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.809
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q09",
+      "question": "How do you specify a public access level for a blob container?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.865,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 4/4 claims",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.865
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "R01",
+      "question": "What is the current stock price of Apple?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.195,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 0/2 claims",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.195
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 8,
+          "relevance": 0.178
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.161
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.158
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last FIFA World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.5,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/2 claims",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "id": "R03",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.209,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 0/2 claims",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.209
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.182
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.16
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R04",
+      "question": "What will the weather be like tomorrow?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.204,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 0/2 claims",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.204
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R05",
+      "question": "Who is the current prime minister of UK?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.5,
+      "faith_method": "llm",
+      "faith_detail": "Supported: 1/2 claims",
+      "sources": [],
+      "passed": true
+    }
+  ]
+}

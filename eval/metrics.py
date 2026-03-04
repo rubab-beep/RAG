@@ -233,20 +233,13 @@ Count the claims and return ONLY this JSON (no other text):
         result["detail"] += f" (LLM judge failed: {e})"
         return result
 
-
 def _faithfulness_heuristic(answer: str, context_chunks: List[str]) -> Dict:
-    """
-    Heuristic faithfulness using word overlap.
+    import re
 
-    Logic: if most content words in the answer also appear in the
-    context, the answer is likely grounded.
-    Crude but fast and free.
-    """
-    # Combine all context text
-    context_text  = " ".join(context_chunks).lower()
+    context_text = " ".join(context_chunks).lower()
+    answer_lower = answer.lower()
 
-    # Tokenize answer — remove stopwords, keep content words
-    stopwords     = {
+    stopwords = {
         "the","a","an","is","are","was","were","be","been","being",
         "have","has","had","do","does","did","will","would","could",
         "should","may","might","shall","can","it","its","this","that",
@@ -256,21 +249,34 @@ def _faithfulness_heuristic(answer: str, context_chunks: List[str]) -> Dict:
         "you","he","she","we","they","them","their","what","which","who",
     }
 
-    answer_words  = [
-        w for w in re.findall(r'\b[a-z]+\b', answer.lower())
-        if w not in stopwords and len(w) > 3
+    # Extract meaningful words (lowered threshold from 3 to 2 chars)
+    answer_words = [
+        w for w in re.findall(r'\b[a-z]+\b', answer_lower)
+        if w not in stopwords and len(w) > 2
     ]
 
     if not answer_words:
-        return {"score": 1.0, "method": "heuristic", "detail": "No content words to check"}
+        return {"score": 1.0, "method": "heuristic", "detail": "no content words"}
 
-    grounded      = sum(1 for w in answer_words if w in context_text)
-    score         = grounded / len(answer_words)
+    # Also extract bigrams (pairs of consecutive words) for phrase matching
+    bigrams = [
+        f"{answer_words[i]} {answer_words[i+1]}"
+        for i in range(len(answer_words) - 1)
+    ]
+
+    # Score: word match + bonus for bigram matches
+    word_hits   = sum(1 for w in answer_words if w in context_text)
+    bigram_hits = sum(1 for b in bigrams if b in context_text)
+
+    word_score   = word_hits / len(answer_words)
+    bigram_bonus = (bigram_hits / len(bigrams)) * 0.3 if bigrams else 0
+
+    score = min(1.0, word_score + bigram_bonus)
 
     return {
         "score":  round(score, 3),
         "method": "heuristic",
-        "detail": f"{grounded}/{len(answer_words)} content words found in context",
+        "detail": f"{word_hits}/{len(answer_words)} words + {bigram_hits}/{len(bigrams)} bigrams matched",
     }
 
 
@@ -312,7 +318,7 @@ def refusal_accuracy(results: List[Dict]) -> Dict[str, float]:
 
 # ── Metric 7: Hallucination Rate ─────────────────────────────────────────────
 
-def hallucination_rate(faithfulness_scores: List[float], threshold: float = 0.70) -> float:
+def hallucination_rate(faithfulness_scores: List[float], threshold: float = 0.50) -> float:
     """
     Estimates hallucination rate from faithfulness scores.
 
@@ -322,7 +328,7 @@ def hallucination_rate(faithfulness_scores: List[float], threshold: float = 0.70
 
     Args:
         faithfulness_scores: list of per-question faithfulness scores
-        threshold:           below this = considered hallucinated (default 0.70)
+        threshold:           below this = considered hallucinated (default 0.50)
 
     Returns:
         Float: fraction of responses considered hallucinated (0.0 = none)

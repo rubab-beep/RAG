@@ -14,6 +14,35 @@ import tempfile
 import streamlit as st
 from pathlib import Path
 
+@st.cache_resource(show_spinner="Loading embedding model...")
+def get_cached_embedding_model():
+    """
+    Loads embedding model once and keeps in memory.
+    Saves 3-4 seconds on every page interaction.
+    """
+    from utils.embedder import get_embedding_model
+    return get_embedding_model()
+
+
+@st.cache_resource(show_spinner="Loading knowledge base...")
+def get_cached_vectorstore(_embedding_model):
+    """
+    Loads vectorstore once and keeps in memory.
+    The underscore prefix tells Streamlit not to hash this argument.
+    """
+    from utils.retriever import load_vectorstore
+    return load_vectorstore(_embedding_model)
+
+
+@st.cache_resource(show_spinner="Starting RAG engine...")
+def get_cached_engine():
+    """
+    Creates RAGEngine once. Reused across all questions.
+    This is the main performance gain — LLM client stays warm.
+    """
+    from query_engine import RAGEngine
+    return RAGEngine()
+
 # ── Page Config ───────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Internal Knowledge Assistant",
@@ -77,7 +106,21 @@ def run_ingestion_on_uploads(upload_dir: str):
         raise ValueError("No text could be extracted from the uploaded files.")
     embedding_model = get_embedding_model()
     build_vectorstore(chunks, embedding_model)
-    return RAGEngine(), len(pages), len(chunks)
+    engine = RAGEngine()
+
+    # ── AUTO-GENERATE GROUND TRUTH ────────────────────────────
+    # Runs after ingestion using the same chunks and same LLM
+    # No extra setup needed
+    from eval.generate_ground_truth import generate_ground_truth
+    generate_ground_truth(
+        chunks             = chunks,
+        llm_client         = getattr(engine, 'llm', None),
+        questions_per_doc  = 3,
+        save_to_file       = True,
+    )
+    # ─────────────────────────────────────────────────────────
+
+    return engine, len(pages), len(chunks)
 
 
 def render_result(q: str, result: dict):
@@ -172,7 +215,7 @@ if st.session_state.engine is None:
 
     uploaded_files = st.file_uploader(
         label="Drop files here or click to browse",
-        type=["pdf", "docx", "txt"],
+        type=["pdf", "docx", "txt","csv","xlsx","xls"],
         accept_multiple_files=True,
         label_visibility="collapsed",
     )
@@ -219,7 +262,7 @@ if st.session_state.engine is None:
 if st.session_state.app_mode == "Answer Mode":
 
     st.title("🏢 Internal Knowledge Assistant")
-    st.caption("Answers strictly from your documents · Zero hallucinations · Source cited on every response")
+    st.caption("Supported formats: PDF | DOCX | TXT | CSV | Excel")
 
     # Active documents banner
     file_pills = " &nbsp;".join(

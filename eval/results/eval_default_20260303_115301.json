@@ -1,0 +1,220 @@
+{
+  "total_questions": 8,
+  "answerable_questions": 3,
+  "refusable_questions": 5,
+  "recall_at_k": 1.0,
+  "precision_at_k": 1.0,
+  "mrr": 1.0,
+  "avg_keyword_coverage": 1.0,
+  "avg_faithfulness": 0.315,
+  "hallucination_rate": 0.75,
+  "refusal_true_pos_rate": 0.8,
+  "refusal_false_pos_rate": 0.0,
+  "refusal_overall_accuracy": 0.875,
+  "recall_scores": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "precision_scores": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "rr_scores": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "faithfulness_scores": [
+    0.667,
+    0.922,
+    0.934,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "label": "default",
+  "elapsed_seconds": 21.5,
+  "timestamp": "2026-03-03 11:53:01",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What is required to create a blob container within Storage Explorer?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.787,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.667,
+      "faith_method": "heuristic",
+      "faith_detail": "54/81 content words found in context",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.787
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "How do you copy a blob container from one storage account to another using Storage Explorer?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.792,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.922,
+      "faith_method": "heuristic",
+      "faith_detail": "59/64 content words found in context",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.792
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q03",
+      "question": "How do you set the public access level for a blob container?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.716,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.934,
+      "faith_method": "heuristic",
+      "faith_detail": "71/76 content words found in context",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.716
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "R01",
+      "question": "What is the current stock price of Apple?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/24 content words found in context",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last FIFA World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/24 content words found in context",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "id": "R03",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.118,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/7 content words found in context",
+      "sources": [
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 11,
+          "relevance": 0.118
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R04",
+      "question": "What will the weather be like tomorrow?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/24 content words found in context",
+      "sources": [],
+      "passed": true
+    },
+    {
+      "id": "R05",
+      "question": "Who is the current prime minister of UK?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": false,
+      "top_score": 0.0,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/24 content words found in context",
+      "sources": [],
+      "passed": true
+    }
+  ]
+}

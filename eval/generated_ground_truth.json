@@ -1,0 +1,102 @@
+[
+  {
+    "id": "Q01",
+    "question": "What are the columns in the issues_overview_report.csv file?",
+    "relevant_source": "issues_overview_report",
+    "relevant_page": 1,
+    "answer_keywords": [
+      "columns",
+      "issues_overview_report.csv",
+      "file"
+    ],
+    "should_refuse": false,
+    "category": "issues_overview_report",
+    "difficulty": "easy",
+    "auto_generated": true
+  },
+  {
+    "id": "Q02",
+    "question": "What is the recommended action for pages with page titles under the configured limit?",
+    "relevant_source": "issues_overview_report",
+    "relevant_page": 1,
+    "answer_keywords": [
+      "page titles",
+      "configured limit",
+      "update"
+    ],
+    "should_refuse": false,
+    "category": "issues_overview_report",
+    "difficulty": "medium",
+    "auto_generated": true
+  },
+  {
+    "id": "Q03",
+    "question": "What should be the heading element following an <h1> on a page?",
+    "relevant_source": "issues_overview_report",
+    "relevant_page": 1,
+    "answer_keywords": [
+      "h1",
+      "heading element",
+      "sequential order"
+    ],
+    "should_refuse": false,
+    "category": "issues_overview_report",
+    "difficulty": "medium",
+    "auto_generated": true
+  },
+  {
+    "id": "R01",
+    "question": "What is the current stock price of Apple?",
+    "relevant_source": null,
+    "relevant_page": null,
+    "answer_keywords": [],
+    "should_refuse": true,
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "auto_generated": true
+  },
+  {
+    "id": "R02",
+    "question": "Who won the last FIFA World Cup?",
+    "relevant_source": null,
+    "relevant_page": null,
+    "answer_keywords": [],
+    "should_refuse": true,
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "auto_generated": true
+  },
+  {
+    "id": "R03",
+    "question": "What is the population of Pakistan?",
+    "relevant_source": null,
+    "relevant_page": null,
+    "answer_keywords": [],
+    "should_refuse": true,
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "auto_generated": true
+  },
+  {
+    "id": "R04",
+    "question": "What will the weather be like tomorrow?",
+    "relevant_source": null,
+    "relevant_page": null,
+    "answer_keywords": [],
+    "should_refuse": true,
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "auto_generated": true
+  },
+  {
+    "id": "R05",
+    "question": "Who is the current prime minister of UK?",
+    "relevant_source": null,
+    "relevant_page": null,
+    "answer_keywords": [],
+    "should_refuse": true,
+    "category": "out_of_scope",
+    "difficulty": "easy",
+    "auto_generated": true
+  }
+]

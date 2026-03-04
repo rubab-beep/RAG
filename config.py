@@ -21,14 +21,14 @@ EMBEDDING_MODEL   = "text-embedding-3-small"   # 1536-dim, cheap, strong
 USE_LOCAL_EMBEDDINGS = True               # Set True to use HuggingFace offline
 
 # ── Chunking ──────────────────────────────────────────────────────────────────
-CHUNK_SIZE        = 500      # ~120 words. Balances context richness vs precision
-CHUNK_OVERLAP     = 75       # 15% overlap prevents cutting sentences mid-thought
+CHUNK_SIZE        = 1200      # ~120 words. Balances context richness vs precision
+CHUNK_OVERLAP     = 100       # 15% overlap prevents cutting sentences mid-thought
 CHUNK_SEPARATORS  = ["\n\n", "\n", ". ", " "]  # Respect paragraph > sentence > word
 
 # ── Retrieval ─────────────────────────────────────────────────────────────────
-TOP_K             = 4        # Retrieve 4 chunks. Sweet spot: enough context, low noise
+TOP_K             = 8        # Retrieve 4 chunks. Sweet spot: enough context, low noise
 SIMILARITY_METRIC = "cosine" # Best for semantic similarity with normalized embeddings
-MIN_RELEVANCE_SCORE = 0.30   # Below this → treat as "not found". Range: 0.0–1.0
+MIN_RELEVANCE_SCORE = 0.10   # Below this → treat as "not found". Range: 0.0–1.0
 
 # Confidence thresholds (based on top chunk similarity score)
 CONFIDENCE_HIGH   = 0.75     # Answer directly stated in documents

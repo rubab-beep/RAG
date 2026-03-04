@@ -1,0 +1,730 @@
+{
+  "total_questions": 17,
+  "answerable_questions": 12,
+  "refusable_questions": 5,
+  "recall_at_k": 1.0,
+  "precision_at_k": 0.854,
+  "mrr": 0.878,
+  "avg_keyword_coverage": 0.889,
+  "avg_faithfulness": 0.682,
+  "hallucination_rate": 0.235,
+  "refusal_true_pos_rate": 0.0,
+  "refusal_false_pos_rate": 0.0,
+  "refusal_overall_accuracy": 0.706,
+  "recall_scores": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "precision_scores": [
+    1.0,
+    1.0,
+    1.0,
+    0.75,
+    0.5,
+    0.75,
+    1.0,
+    0.25,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "rr_scores": [
+    1.0,
+    0.2,
+    0.333,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "faithfulness_scores": [
+    0.867,
+    0.929,
+    0.939,
+    0.545,
+    1.0,
+    0.837,
+    0.818,
+    0.727,
+    0.75,
+    0.925,
+    0.941,
+    0.944,
+    0.143,
+    0.407,
+    0.0,
+    0.655,
+    0.167
+  ],
+  "label": "default",
+  "elapsed_seconds": 404.1,
+  "timestamp": "2026-03-04 08:05:43",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What is the name of the Python library used for extracting tables in PDFs?",
+      "category": "data_extraction_from_unstructured_pdfs",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.668,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 0.667,
+      "faithfulness": 0.867,
+      "faith_method": "heuristic",
+      "faith_detail": "13/15 content words found in context",
+      "sources": [
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 1,
+          "relevance": 0.668
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 10,
+          "relevance": 0.611
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 9,
+          "relevance": 0.602
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 4,
+          "relevance": 0.595
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 8,
+          "relevance": 0.542
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "What library is used to extract the coordinates of words from a PDF file?",
+      "category": "data_extraction_from_unstructured_pdfs",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.661,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.2,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.929,
+      "faith_method": "heuristic",
+      "faith_detail": "13/14 content words found in context",
+      "sources": [
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 6,
+          "relevance": 0.661
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 4,
+          "relevance": 0.658
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 9,
+          "relevance": 0.657
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 1,
+          "relevance": 0.614
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 5,
+          "relevance": 0.608
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 10,
+          "relevance": 0.573
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q03",
+      "question": "How do you load a PDF file using PyPDF2 in the provided example?",
+      "category": "data_extraction_from_unstructured_pdfs",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.542,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 0.333,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.939,
+      "faith_method": "heuristic",
+      "faith_detail": "31/33 content words found in context",
+      "sources": [
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 10,
+          "relevance": 0.542
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 1,
+          "relevance": 0.539
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 9,
+          "relevance": 0.523
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 4,
+          "relevance": 0.476
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q04",
+      "question": "According to the text, what percentage of all stored organizational data is unstructured?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.573,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 0.75,
+      "rr": 1.0,
+      "keyword_coverage": 0.667,
+      "faithfulness": 0.545,
+      "faith_method": "heuristic",
+      "faith_detail": "6/11 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.573
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.501
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.438
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 11,
+          "relevance": 0.433
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q05",
+      "question": "What open source tool is mentioned in the text as providing an efficient implementation of bag-of-words and skip-gram architectures?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.56,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 0.5,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 1.0,
+      "faith_method": "heuristic",
+      "faith_detail": "18/18 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.56
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.37
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 9,
+          "relevance": 0.368
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 6,
+          "relevance": 0.353
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q06",
+      "question": "What type of prediction is used to forecast the value of a target autoregressive variable for a future time frame based on historical values?",
+      "category": "intricacies_of_unstructured_data",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.446,
+      "confidence": "LOW",
+      "recall": 1.0,
+      "precision": 0.75,
+      "rr": 1.0,
+      "keyword_coverage": 0.667,
+      "faithfulness": 0.837,
+      "faith_method": "heuristic",
+      "faith_detail": "41/49 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.446
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.269
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.256
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 3,
+          "relevance": 0.23
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q07",
+      "question": "What is the primary goal that has forced organizations to evolve their development processes, according to the text?",
+      "category": "sample-unstructured-paper",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.462,
+      "confidence": "LOW",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.818,
+      "faith_method": "heuristic",
+      "faith_detail": "18/22 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 1,
+          "relevance": 0.462
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 2,
+          "relevance": 0.419
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 3,
+          "relevance": 0.374
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q08",
+      "question": "What types of algorithms were used by the Search division in the company?",
+      "category": "sample-unstructured-paper",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.511,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 0.25,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.727,
+      "faith_method": "heuristic",
+      "faith_detail": "16/22 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.511
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.42
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.403
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 3,
+          "relevance": 0.335
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q09",
+      "question": "What type of response format was used by participants to rate their agreement with the given statements?",
+      "category": "sample-unstructured-paper",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.518,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.75,
+      "faith_method": "heuristic",
+      "faith_detail": "15/20 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 8,
+          "relevance": 0.518
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 6,
+          "relevance": 0.251
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.227
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 7,
+          "relevance": 0.213
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q10",
+      "question": "What is required to create a blob container within Storage Explorer?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.833,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 0.667,
+      "faithfulness": 0.925,
+      "faith_method": "heuristic",
+      "faith_detail": "49/53 content words found in context",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.833
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q11",
+      "question": "How do you delete a blob container in Storage Explorer?",
+      "category": "semi-structured",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.831,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.941,
+      "faith_method": "heuristic",
+      "faith_detail": "48/51 content words found in context",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.831
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q12",
+      "question": "How do you add a new access policy to a blob container?",
+      "category": "semi-structured",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.758,
+      "confidence": "HIGH",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.944,
+      "faith_method": "heuristic",
+      "faith_detail": "51/54 content words found in context",
+      "sources": [
+        {
+          "file": "semi-structured.docx",
+          "page": 1,
+          "relevance": 0.758
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "R01",
+      "question": "What is the current stock price of Apple?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.14,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.143,
+      "faith_method": "heuristic",
+      "faith_detail": "2/14 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.14
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.115
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 7,
+          "relevance": 0.112
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 8,
+          "relevance": 0.106
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last FIFA World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.112,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.407,
+      "faith_method": "heuristic",
+      "faith_detail": "11/27 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 6,
+          "relevance": 0.112
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 10,
+          "relevance": 0.104
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R03",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.145,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/6 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.145
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.137
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.119
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 11,
+          "relevance": 0.118
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R04",
+      "question": "What will the weather be like tomorrow?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.175,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.655,
+      "faith_method": "heuristic",
+      "faith_detail": "19/29 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 6,
+          "relevance": 0.175
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 3,
+          "relevance": 0.145
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.138
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.128
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 9,
+          "relevance": 0.123
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 4,
+          "relevance": 0.121
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.116
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R05",
+      "question": "Who is the current prime minister of UK?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.191,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.167,
+      "faith_method": "heuristic",
+      "faith_detail": "1/6 content words found in context",
+      "sources": [
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 5,
+          "relevance": 0.191
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 4,
+          "relevance": 0.14
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 5,
+          "relevance": 0.108
+        },
+        {
+          "file": "sample-unstructured-paper.pdf",
+          "page": 10,
+          "relevance": 0.104
+        }
+      ],
+      "passed": false
+    }
+  ]
+}

@@ -110,24 +110,52 @@ def score_to_confidence(top_score: float, chunks_found: int) -> str:
     else:
         return "LOW"
 
+def format_context(chunks, scores) -> str:
+    """
+    Formats retrieved chunks with clear boundaries and labels.
+    Makes it easy for the LLM to read each excerpt separately.
+    """
+    context_parts = []
 
-def format_context(chunks: List[Document], scores: List[float]) -> str:
-    """
-    Assembles retrieved chunks into a formatted context block for the prompt.
-    Includes source metadata inline so the LLM can cite accurately.
-    """
-    parts = []
-    for i, (chunk, score) in enumerate(zip(chunks, scores), start=1):
-        meta = chunk.metadata
+    for i, (chunk, score) in enumerate(zip(chunks, scores), 1):
+        source   = chunk.metadata.get("source", "Unknown")
+        page     = chunk.metadata.get("page",   "?")
+
+        # Clear header for each excerpt
         header = (
-            f"[EXCERPT {i}] "
-            f"Source: {meta.get('source', 'Unknown')} | "
-            f"Page: {meta.get('page', '?')} | "
-            f"Relevance: {score:.2f}"
+            f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"EXCERPT {i} — {source} — Page {page}\n"
+            f"Relevance score: {score:.3f}\n"
+            f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         )
-        parts.append(f"{header}\n{chunk.page_content}")
 
-    return "\n\n" + "─" * 60 + "\n\n".join(parts) + "\n\n" + "─" * 60
+        # Clean the chunk text before showing to LLM
+        clean_text = _clean_chunk_for_llm(chunk.page_content)
+
+        context_parts.append(f"{header}\n{clean_text}")
+
+    return "\n\n".join(context_parts)
+
+def _clean_chunk_for_llm(text: str) -> str:
+    """
+    Cleans chunk text so LLM can read it more accurately.
+    Fixes common extraction artifacts that cause imprecise answers.
+    """
+    import re
+
+    # Fix broken hyphenated words split across lines
+    # "classifi-\ned" → "classified"
+    text = re.sub(r'(\w+)-\n(\w+)', r'\1\2', text)
+
+    # Fix words that got merged (common in PDF extraction)
+    # "dataanalysis" → harder to fix but flag obvious cases
+    text = re.sub(r'\n+', ' ', text)        # collapse newlines to spaces
+    text = re.sub(r' {2,}', ' ', text)      # collapse multiple spaces
+
+    # Restore sentence structure
+    text = re.sub(r'\.([A-Z])', r'. \1', text)   # add space after period
+
+    return text.strip()
 
 
 def format_sources(chunks: List[Document], scores: List[float]) -> List[dict]:

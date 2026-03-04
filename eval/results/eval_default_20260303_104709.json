@@ -1,0 +1,354 @@
+{
+  "total_questions": 8,
+  "answerable_questions": 3,
+  "refusable_questions": 5,
+  "recall_at_k": 1.0,
+  "precision_at_k": 0.833,
+  "mrr": 0.778,
+  "avg_keyword_coverage": 1.0,
+  "avg_faithfulness": 0.344,
+  "hallucination_rate": 0.75,
+  "refusal_true_pos_rate": 0.0,
+  "refusal_false_pos_rate": 0.0,
+  "refusal_overall_accuracy": 0.375,
+  "recall_scores": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "precision_scores": [
+    0.5,
+    1.0,
+    1.0
+  ],
+  "rr_scores": [
+    0.333,
+    1.0,
+    1.0
+  ],
+  "faithfulness_scores": [
+    0.783,
+    0.615,
+    0.758,
+    0.222,
+    0.0,
+    0.154,
+    0.0,
+    0.222
+  ],
+  "label": "default",
+  "elapsed_seconds": 43.9,
+  "timestamp": "2026-03-03 10:47:09",
+  "per_question": [
+    {
+      "id": "Q01",
+      "question": "What are some examples of sources from which data can be extracted using data extraction?",
+      "category": "data_extraction_from_unstructured_pdfs",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.652,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 0.5,
+      "rr": 0.333,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.783,
+      "faith_method": "heuristic",
+      "faith_detail": "36/46 content words found in context",
+      "sources": [
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 1,
+          "relevance": 0.652
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 11,
+          "relevance": 0.568
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 1,
+          "relevance": 0.537
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 3,
+          "relevance": 0.504
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q02",
+      "question": "What is the purpose of the function make_text() in this code snippet?",
+      "category": "data_extraction_from_unstructured_pdfs",
+      "difficulty": "medium",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.426,
+      "confidence": "LOW",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.615,
+      "faith_method": "heuristic",
+      "faith_detail": "8/13 content words found in context",
+      "sources": [
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 5,
+          "relevance": 0.426
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 6,
+          "relevance": 0.425
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 9,
+          "relevance": 0.305
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 4,
+          "relevance": 0.253
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q03",
+      "question": "How do you load a PDF file using PyPDF2?",
+      "category": "data_extraction_from_unstructured_pdfs",
+      "difficulty": "easy",
+      "should_refuse": false,
+      "found": true,
+      "top_score": 0.597,
+      "confidence": "MEDIUM",
+      "recall": 1.0,
+      "precision": 1.0,
+      "rr": 1.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.758,
+      "faith_method": "heuristic",
+      "faith_detail": "50/66 content words found in context",
+      "sources": [
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 9,
+          "relevance": 0.597
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 1,
+          "relevance": 0.554
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 4,
+          "relevance": 0.537
+        },
+        {
+          "file": "Data Extraction from Unstructured PDFs.pdf",
+          "page": 10,
+          "relevance": 0.537
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "R01",
+      "question": "What is the current stock price of Apple?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.197,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.222,
+      "faith_method": "heuristic",
+      "faith_detail": "2/9 content words found in context",
+      "sources": [
+        {
+          "file": "sample-tables.pdf",
+          "page": 10,
+          "relevance": 0.197
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 6,
+          "relevance": 0.196
+        },
+        {
+          "file": "Intricacies_of_Unstructured_Data.pdf",
+          "page": 2,
+          "relevance": 0.195
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 8,
+          "relevance": 0.194
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 1,
+          "relevance": 0.181
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R02",
+      "question": "Who won the last FIFA World Cup?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.174,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/9 content words found in context",
+      "sources": [
+        {
+          "file": "960889a3ee7fd1a3d124c461bc0304fbe06c7724_EC9665M_Delonghi_Handbook.pdf",
+          "page": 3,
+          "relevance": 0.174
+        },
+        {
+          "file": "08299_EasyR_The-Story-of-Coffee.pdf",
+          "page": 6,
+          "relevance": 0.151
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R03",
+      "question": "What is the population of Pakistan?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.286,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.154,
+      "faith_method": "heuristic",
+      "faith_detail": "2/13 content words found in context",
+      "sources": [
+        {
+          "file": "sample-tables.pdf",
+          "page": 7,
+          "relevance": 0.286
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 3,
+          "relevance": 0.229
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 2,
+          "relevance": 0.222
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R04",
+      "question": "What will the weather be like tomorrow?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.315,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.0,
+      "faith_method": "heuristic",
+      "faith_detail": "0/9 content words found in context",
+      "sources": [
+        {
+          "file": "sample-tables.pdf",
+          "page": 11,
+          "relevance": 0.315
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 2,
+          "relevance": 0.265
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 3,
+          "relevance": 0.258
+        },
+        {
+          "file": "08299_EasyR_The-Story-of-Coffee.pdf",
+          "page": 12,
+          "relevance": 0.205
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "R05",
+      "question": "Who is the current prime minister of UK?",
+      "category": "out_of_scope",
+      "difficulty": "easy",
+      "should_refuse": true,
+      "found": true,
+      "top_score": 0.271,
+      "confidence": "LOW",
+      "recall": 0.0,
+      "precision": 0.0,
+      "rr": 0.0,
+      "keyword_coverage": 1.0,
+      "faithfulness": 0.222,
+      "faith_method": "heuristic",
+      "faith_detail": "2/9 content words found in context",
+      "sources": [
+        {
+          "file": "sample-tables.pdf",
+          "page": 5,
+          "relevance": 0.271
+        },
+        {
+          "file": "08299_EasyR_The-Story-of-Coffee.pdf",
+          "page": 15,
+          "relevance": 0.265
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 1,
+          "relevance": 0.237
+        },
+        {
+          "file": "sample-tables.pdf",
+          "page": 2,
+          "relevance": 0.225
+        }
+      ],
+      "passed": false
+    }
+  ]
+}
